@@ -118,3 +118,8 @@ You can easily extend this to:
 - Add an agentic layer (e.g. LangChain) that reruns searches when confidence is low.
 - Plug in additional search sources (Brave Search, LangSearch, etc.).
 
+
+Demo Video:
+https://drive.google.com/drive/folders/1Rp6m8tG5XBsmLBmTJIHjSEA_PcDN6pfz?usp=drive_link
+
+
