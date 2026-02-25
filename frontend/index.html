@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Valid Person Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <h1>Valid Person Finder</h1>
+        <p class="subtitle">
+          Enter a company and designation — we will search public sources (LinkedIn, company sites, news, Wikipedia)
+          and return the most likely person with a confidence score.
+        </p>
+      </header>
+
+      <main class="app-main">
+        <section class="card input-card">
+          <form id="search-form">
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" placeholder="e.g. Meta, Google, Stripe" required />
+            </div>
+            <div class="field">
+              <label for="designation">Designation</label>
+              <input id="designation" name="designation" type="text" placeholder="e.g. CEO, Head of Engineering" required />
+            </div>
+            <div class="actions">
+              <button type="submit" class="primary-btn">Search person</button>
+              <button type="reset" class="ghost-btn" id="reset-btn">Clear</button>
+            </div>
+          </form>
+          <div id="status" class="status"></div>
+        </section>
+
+        <section class="card results-card">
+          <div class="results-header">
+            <h2>Result</h2>
+            <button class="ghost-btn small" id="toggle-json">Toggle raw JSON</button>
+          </div>
+          <div id="best-result" class="best-result empty-state">
+            <p>Run a search to see the most likely person for the given role.</p>
+          </div>
+
+          <div id="candidates" class="candidates"></div>
+
+          <details class="raw-json">
+            <summary>Raw JSON response</summary>
+            <pre id="json-output"></pre>
+          </details>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <span>Powered by public web search and heuristic validation.</span>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
